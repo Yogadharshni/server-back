@@ -12,13 +12,9 @@ connectDB();
 const app = express();
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
-// app.use(cors());
+app.use(cors());
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+
 
 // app.use('/', (req, res) => {
 //   res.send("This is a stack overflow clone API")
